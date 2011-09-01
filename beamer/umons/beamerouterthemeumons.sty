@@ -37,13 +37,13 @@
 {
   \leavevmode%
   \hbox{%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=0.5ex,right]{section in head/foot}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.255ex,dp=0.5ex,right]{section in head/foot}%
     \usebeamerfont{section in head/foot}\insertsectionhead\hspace*{1ex}
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.666667\paperwidth,ht=2.25ex,dp=0.5ex,left]{subsection in head/foot}%
+  \begin{beamercolorbox}[wd=.666667\paperwidth,ht=2.255ex,dp=0.5ex,left]{subsection in head/foot}%
     \usebeamerfont{subsection in head/foot}\hspace*{2ex}\insertsubsectionhead
   \end{beamercolorbox}}%
-  \vskip0pt%
+%  \vskip0pt%
 }
 
 \defbeamertemplate*{frametitle}{umons}[1][left]
@@ -52,12 +52,13 @@
   \@tempdima=\textwidth%
   \advance\@tempdima by\beamer@leftmargin%
   \advance\@tempdima by\beamer@rightmargin%
-  \begin{beamercolorbox}[sep=0.125cm,#1,wd=\the\@tempdima]{frametitle}
+  \vskip0.05ex%
+  \begin{beamercolorbox}[sep=0.18cm,#1,wd=\the\@tempdima]{frametitle}
     \usebeamerfont{frametitle}%
     \vbox{}\vskip-1ex%
     \if@tempswa\else\csname beamer@fte#1\endcsname\fi%
     \strut\insertframetitle\strut\par%
-    {%  
+    {%
       \ifx\insertframesubtitle\@empty%
       \else%
       {\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle\strut\par}%
