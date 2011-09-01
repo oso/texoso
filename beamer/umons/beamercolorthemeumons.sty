@@ -1,0 +1,35 @@
+% Copyright 2007 by Till Tantau
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+\ProvidesPackageRCS $Header: /home/oso/dev/tex/beamer/umons/beamercolorthemeumons.sty,v d02a7cf4d8ae 2010/06/17 09:11:41 oso $
+
+
+\mode<presentation>
+
+\definecolor{beamer@pink}{rgb}{0.768,0.047,0.259}
+
+\setbeamercolor{normal text}{fg=black,bg=white}
+\setbeamercolor{alerted text}{fg=blue}
+\setbeamercolor{example text}{fg=green!50!black}
+\setbeamercolor{structure}{fg=beamer@pink}
+\setbeamercolor{titlelike}{parent=structure,bg=white}
+
+\definecolor{pink}{RGB}{196,12,66}
+\definecolor{blue}{RGB}{0,181,204}
+\setbeamercolor{palette primary}
+{use={structure,normal text},fg=white,bg=blue}
+\setbeamercolor{palette secondary}
+{use={structure,normal text},fg=white,bg=blue}
+\setbeamercolor{palette tertiary}
+{use={structure,normal text},fg=white,bg=pink}
+\setbeamercolor{palette quaternary}
+{use={structure,normal text},fg=structure.fg,bg=pink}
+
+\mode
+<all>
