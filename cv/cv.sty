@@ -1,0 +1,49 @@
+\def\maketitle{
+	\noindent
+	\textbf{\@author\\}
+	\@location\\ 
+	Phone : \@phone\\
+	E-mail : \@email\\
+	\vspace{1mm}\\
+	\centerline{\Large \bfseries \@title}
+}
+
+\def\location#1{\def\@location{#1}}
+\def\email#1{\def\@email{#1}}
+\def\phone#1{\def\@phone{#1}}
+\def\title#1{\def\@title{#1}}
+
+\def\section{\newsection}
+\def\newsection{\@ifnextchar[
+	\newsectionwithtwoarguments\newsectionwithoneargument}
+\def\newsectionwithoneargument#1{\newsectionwithtwoarguments[#1]{#1}}
+\def\newsectionwithtwoarguments[#1]#2
+{
+	\ifhmode\par\fi
+	\removelastskip
+	\vskip 3.5ex\goodbreak
+	\hbox to \hsize{\vbox{
+		\noindent
+		\leavevmode\bfseries\raggedright
+		#2\par
+		\vskip -2ex
+		\noindent\hrulefill
+	}}
+	\nobreak
+	\vskip 1ex\nobreak
+}
+
+\def\cvitem#1#2#3{
+	\indent
+	\begin{tabularx}{17cm}{p{#1} X}
+		$\bullet$ #2 & #3\\
+	\end{tabularx}
+	\vskip 1mm
+}
+
+\def\cvsubitem#1{
+	\indent
+	\begin{tabularx}{\hsize}{p{0.1mm} X}
+		$-$ & \textit{#1}
+	\end{tabularx}
+}
